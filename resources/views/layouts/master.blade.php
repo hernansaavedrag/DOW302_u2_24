@@ -75,7 +75,7 @@
                             </ul>
                         </li>
                         <li class="nav-item d-lg-none">
-                            <a class="nav-link" href="/login">Cerrar Sesión</a>
+                            <a class="nav-link" href="{{route('usuarios.logout')}}">Cerrar Sesión</a>
                         </li>
 
                     </ul>
