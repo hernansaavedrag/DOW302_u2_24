@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
 
-    public function __construct() { //esto hace que cuando se incie sesion sea una sola sesion.
-        $this->middleware('auth');
-    }
+    // public function __construct() { //esto hace que cuando se incie sesion sea una sola sesion.
+    //     $this->middleware('auth')->except('login');
+    // }
 
     public function index()
     {

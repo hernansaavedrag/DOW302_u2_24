@@ -15,10 +15,10 @@
     <div class="container-fluid">
         <div class="row bg-dark text-white">
             <div class="col-8">
-                Bienvenido <span class="fw-bold">User1</span>
+                Bienvenido <span class="fw-bold">{{Auth::user()->nombre}}</span>
             </div>
             <div class="col-3 text-end d-none d-lg-block">
-                Último inicio de sesión 01/04/2023 a las 18:34
+                Último inicio de sesión {{date('d-m-Y',strtotime(Auth::user()->ultimo_login))}} a las {{date('H:i:s',strtotime(Auth::user()->ultimo_login))}}
             </div>
             <div class="col-1 text-end d-none d-lg-block">
                 <a href="/login" class="text-white">Cerrar Sesión</a>

@@ -10,14 +10,14 @@ use App\Http\Controllers\UsuariosController;
 //     return view('welcome');
 // });
 
-Route::get('/',[HomeController::class,'index'])->name('home.index');
+Route::get('/',[HomeController::class,'index'])->name('home.index')->middleware('auth');
 Route::get('/login',[HomeController::class,'login'])->name('home.login');
 
-Route::get('/equipos',[EquiposController::class,'index'])->name('equipos.index');
+Route::get('/equipos',[EquiposController::class,'index'])->name('equipos.index')->middleware('auth');
 Route::post('/equipos',[EquiposController::class,'store'])->name('equipos.store');
 Route::delete('/equipos/{equipo}',[EquiposController::class,'destroy'])->name('equipos.destroy');
 
-Route::get('/jugadores',[JugadoresController::class,'index'])->name('jugadores.index');
+Route::get('/jugadores',[JugadoresController::class,'index'])->name('jugadores.index')->middleware('auth');
 Route::post('/jugadores',[JugadoresController::class,'store'])->name('jugadores.store');
 
 Route::post('usuarios/login',[UsuariosController::class,'login'])->name('usuarios.login');
